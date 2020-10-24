@@ -194,4 +194,10 @@ img{
     #song-name{
         font-size: 15px;
     }
+    .volume-control i{
+        font-size: 15px;
+    }
+    #volume{
+        width: 80px;
+    }
 }
