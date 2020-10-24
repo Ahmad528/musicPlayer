@@ -178,14 +178,20 @@ img{
         font-size: 18px;
     }
 }
-@media screen and (max-width: 579px){
+@media screen and (max-width: 479px){
     .access-control .media i{
-        font-size: 18px;
+        font-size: 15px;
     }
     .volume-control i{
         font-size: 18px;
     }
     img{
-        height: 35vh;
+        height: 30vh;
+    }
+.access-control button{
+    margin-right: 10px;
+    }
+    #song-name{
+        font-size: 15px;
     }
 }
