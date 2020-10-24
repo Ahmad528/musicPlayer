@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="/music.css">
+
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>   
+    <audio src="/music/alan-walker-alone.mp3" controls id="music"></audio>
+
+        <div class="playlists togglePlaylist" id="playlist">
+            <h2 id="title">Your Playlist</h2></h1>
+            <ul>
+                <li class="song addClass" id="id0" onclick="songByChoice(this)">alan-walker-alone</li>
+                
+                <li class="song" id="id1" onclick="songByChoice(this)" id="click">apna-time-aayega-gully-boy</li>
+
+                <li class="song" id="id2" onclick="songByChoice(this)">Sanu Ek Pal Chain - Raid</li>
+
+                <li class="song" id="id3"
+                onclick="songByChoice(this)">jitni-dafa-dekhu-tujhe</li>
+
+                <li class="song" id="id4" onclick="songByChoice(this)">love-me-like-you-do</li>
+
+                <li class="song" id="id5" onclick="songByChoice(this)">Post Malone - Hollywood s Bleeding (Audio)</li>
+
+                <li class="song" id="id6" onclick="songByChoice(this)">roi-na-je-yaad-meri-aayi-ve</li>
+
+                <li class="song" id="id7" onclick="songByChoice(this)">Selena Gomez - The Heart Wants What It Wants (Official Video) (1)</li>
+
+                <li class="song" id="id8" onclick="songByChoice(this)">tere-jaisa-yaar-kahan-new-version</li>
+
+                <li class="song" id="id9" onclick="songByChoice(this)" value="9">Bon Appetit</li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <button id="bars" onclick="togglePlaylist()"><i class="fa fa-bars"></i></button>
+
+            <div class="music-element">
+
+                <div class="song-profile">
+                    <h2 id="song-name">alan-walker-alone</h2>
+                    <img src="/images/alanWalker.jpg" alt="" id="song-img">
+                </div>  
+
+                <input type="range" min="0" max="100" id="progress" value="0" step="1">
+                <div class="run-time">
+                    <p id="current-time">0:0</p>
+                    <p id="song-duration">2:43</p>
+                </div>
+                <div class="access-control">
+                    <div class="media">
+
+                        <button onclick="back()"><i class="fa fa-step-backward"></i></button>
+                        <button id="play" onclick="togglePlay()"><i class="fa fa-play"></i></button>
+                        <button id="pause" onclick="togglePlay()"><i class="fa fa-pause"></i></button>
+                        <button><i class="fa fa-step-forward" onclick="next()"></i></button>
+                    </div>
+                    <div class="volume-control">
+                        <button id="volume-access"><i class="fa fa-volume-up" onclick="toggleMute()">
+                        </i></button>
+                        
+                        <input type="range" min="0" max="1" step="0.1"  id="volume" onchange="setVolume()" value="0.5">
+                        <buttom id="repeat" onclick="loop()"><i class="fa fa-repeat"></i></buttom>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="/music.js"></script>
+</body>
+</html>
